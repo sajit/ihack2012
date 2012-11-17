@@ -48,7 +48,7 @@ public class FacilityAdapter extends ArrayAdapter<Facility>{
 		 });
 		 
 		 Button addressButton = (Button)rowView.findViewById(R.id.address_id);
-		 addressButton.setText(facilities[position].getAddress());
+		 //addressButton.setText(facilities[position].getAddress());
 		 addressButton.setOnClickListener(new OnClickListener(){
 
 			@Override
