@@ -11,18 +11,6 @@
         android:onClick="findParking"
         android:text="@string/find_parking" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="findEverything"
-        android:text="@string/park_and_charge" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="topDeals"
-        android:text="@string/best_deal" />
+   
 
 </LinearLayout>

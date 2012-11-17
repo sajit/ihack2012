@@ -10,8 +10,22 @@ public class Facility {
 	private String address;
 	private int distance;
 	private List<String> hrs;
-	private boolean is_open;
+	private boolean open;
     private String name;
+    private double latitude;
+    private double longitude;
+	public double getLatitude() {
+		return latitude;
+	}
+	public void setLatitude(double latitude) {
+		this.latitude = latitude;
+	}
+	public double getLongitude() {
+		return longitude;
+	}
+	public void setLongitude(double longitude) {
+		this.longitude = longitude;
+	}
 	public String getAddress() {
 		return address;
 	}
@@ -31,10 +45,10 @@ public class Facility {
 		this.hrs = hrs;
 	}
 	public boolean isIs_open() {
-		return is_open;
+		return open;
 	}
 	public void setIs_open(boolean is_open) {
-		this.is_open = is_open;
+		this.open = is_open;
 	}
 	public String getName() {
 		return name;

@@ -24,8 +24,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".FindParking" />
-        <activity android:name=".FindEverything" />
-        <activity android:name=".TopDeals" />
+        <activity android:name=".FacilityDetails" />
+       
     </application>
 
 </manifest>

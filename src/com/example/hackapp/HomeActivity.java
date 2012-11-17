@@ -36,17 +36,5 @@ public class HomeActivity extends Activity{
 		startActivity(findParkingIntent);
 	}
 	
-	public void findEverything(final View aButton){
-		Intent findEverythingIntent = new Intent(this,FindEverything.class);
-		startActivity(findEverythingIntent);
-	}
-	
-	public void topDeals(final View aButton){
-		Intent topDealsIntent = new Intent(this,TopDeals.class);
-		startActivity(topDealsIntent);
-	}
-	
-
-	
 
 }
