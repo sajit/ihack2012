@@ -3,17 +3,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal" >
-
+    
+    <ImageView
+        android:id="@+id/parkView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/big_x"
+        />
+    
+    <ImageView
+        android:id="@+id/chargeView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/big_x" />
+    
     <Button
         android:id="@+id/facility_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Facility1" />
+         />
 
-    <Button
+    <TextView android:id="@+id/facility_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <!--Button
         android:id="@+id/address_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Get Directions" />
+        android:text="Get Directions" /-->
 
 </LinearLayout>

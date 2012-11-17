@@ -16,6 +16,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.hackapp.model.Facility;
+import com.example.hackapp.model.FacilitySummary;
 import com.example.location.dao.LocationDao;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -55,7 +56,7 @@ public class FindParking extends ListActivity {
             //TODO fix me
             //List<Facility> facilities = gson.fromJson(getResponseJson(null), collectionType);
             //facilityAdapter = new FacilityAdapter(this,facilities.toArray(new Facility[facilities.size()]));
-            facilityAdapter = new FacilityAdapter(this,getMockFacilities().toArray(new Facility[4]));
+            facilityAdapter = new FacilityAdapter(this,getMockFacilities().toArray(new FacilitySummary[4]));
             ListView facilityList = (ListView)findViewById(android.R.id.list);
             facilityList.setAdapter(facilityAdapter);
           
@@ -63,13 +64,13 @@ public class FindParking extends ListActivity {
         }
             
 	}
-	private List<Facility> getMockFacilities(){
-		List<Facility> mockFacilities = new ArrayList<Facility>();
+	private List<FacilitySummary> getMockFacilities(){
+		List<FacilitySummary> mockFacilities = new ArrayList<FacilitySummary>();
 		for(int i=0;i<4;i++){
-			Facility f = new Facility();
-			f.setAddress("hackathon building"+i);
-			f.setDistance(400+i);
-			f.setIs_open(true);
+			FacilitySummary f = new FacilitySummary();
+			f.setParking(true);
+			f.setCharging(i%2==0);
+			f.setRate(Double.valueOf(i));
 			f.setName("Mocked up station");
 			mockFacilities.add(f);
 		}

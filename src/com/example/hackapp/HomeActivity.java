@@ -1,12 +1,19 @@
 package com.example.hackapp;
 
+import java.util.Date;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.TimePicker;
 
 public class HomeActivity extends Activity{
 
+	private static final String TAG = HomeActivity.class.getSimpleName();
 	/**
 	 * The serialization (saved instance state) Bundle key representing the
 	 * current dropdown position.
@@ -32,7 +39,21 @@ public class HomeActivity extends Activity{
 	
 	
 	public void findParking(final View aButton){
+		DatePicker datePicker = (DatePicker)findViewById(R.id.date_picker_id);
+		
+		TimePicker timepicker = (TimePicker)findViewById(R.id.timePicker1);
+		
+		EditText addressText = (EditText)findViewById(R.id.editText1);
+		String address = addressText.getText().toString();
+		EditText durationText = (EditText)findViewById(R.id.editText2);
+		String duration = durationText.getText().toString();
 		Intent findParkingIntent = new Intent(this,FindParking.class);
+		findParkingIntent.putExtra("address", address);
+		findParkingIntent.putExtra("duration", Integer.valueOf(duration));
+		Date date = new Date(datePicker.getYear() - 1900, datePicker.getMonth(), datePicker.getDayOfMonth(),
+				timepicker.getCurrentHour(),timepicker.getCurrentMinute(),0);
+		findParkingIntent.putExtra("date", date);
+		Log.i(TAG,date.toString());
 		startActivity(findParkingIntent);
 	}
 	
