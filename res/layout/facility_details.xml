@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	<LinearLayout 
+	 android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal">
+
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Name" />
+
+	    <TextView
+	        android:id="@+id/station_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Name of station" />
+
+	</LinearLayout>
+	<LinearLayout 
+	 android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal">
+
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Hrs" />
+
+	    <TextView
+	        android:id="@+id/hrs1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Value" />
+
+	</LinearLayout>
+	<LinearLayout 
+	 android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal">
+
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Open" />
+
+	    <TextView
+	        android:id="@+id/is_open"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Boolean" />
+
+	</LinearLayout>
+	<LinearLayout 
+	 android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:orientation="horizontal">
+
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Distance" />
+
+	    <TextView
+	        android:id="@+id/distance"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="100ft" />
+
+	</LinearLayout>
+	
+	
+</LinearLayout>
