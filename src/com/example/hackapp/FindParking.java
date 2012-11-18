@@ -34,12 +34,23 @@ public class FindParking extends ListActivity {
 	private FacilityAdapter facilityAdapter;
 
 	private LocationDao locationDao;
+	
+	protected void onResume(){
+		super.onResume();
+		//setContentView(R.layout.parking);
+		doShowRows();
+	}
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.parking);
+		doShowRows();
+            
+	}
+	private void doShowRows(){
 		locationDao = new LocationDao(this);
-		Location location = locationDao.getBestLocation();
+		LocationManager lm = (LocationManager)this.getSystemService(Context.LOCATION_SERVICE);
+		Location location = locationDao.getBestLocation(lm);
         if(location != null){
         	 //make request
 //        	BasicHttpClient httpClient = new BasicHttpClient(SERVER_URL);
@@ -62,7 +73,6 @@ public class FindParking extends ListActivity {
           
             
         }
-            
 	}
 	private List<FacilitySummary> getMockFacilities(){
 		List<FacilitySummary> mockFacilities = new ArrayList<FacilitySummary>();

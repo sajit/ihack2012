@@ -1,24 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
+    <LinearLayout 
+      android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:orientation="vertical">
 	<LinearLayout 
 	 android:layout_width="wrap_content"
      android:layout_height="wrap_content"
      android:orientation="horizontal">
 
 	    <TextView
-	        android:layout_width="wrap_content"
+	        android:layout_width="56dp"
 	        android:layout_height="wrap_content"
-	        android:text="Name" />
+	        android:gravity="left"
+	        android:text="Name:" />
 
 	    <TextView
 	        android:id="@+id/station_name"
-	        android:layout_width="wrap_content"
+	        android:layout_width="121dp"
 	        android:layout_height="wrap_content"
+	        android:gravity="right"
 	        android:text="Name of station" />
 
+	</LinearLayout>
+	<LinearLayout 
+	 android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal">
+	    <TextView
+	        android:layout_width="56dp"
+	        android:layout_height="wrap_content"
+	        android:gravity="left"
+	        android:text="Type:" />
+	    <ImageView
+        
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/parking_p_50"
+        />
+	     <ImageView
+        android:id="@+id/is_charging"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/blank" />
 	</LinearLayout>
 	<LinearLayout 
 	 android:layout_width="wrap_content"
@@ -29,34 +56,17 @@
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:text="Hrs" />
-
-	    <TextView
-	        android:id="@+id/hrs1"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:text="Value" />
-
+		<ListView android:id="@+id/hrs_list"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content" >
+		    
+		</ListView>
+	   
 	</LinearLayout>
+	
 	<LinearLayout 
 	 android:layout_width="wrap_content"
      android:layout_height="wrap_content"
-     android:orientation="horizontal">
-
-	    <TextView
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:text="Open" />
-
-	    <TextView
-	        android:id="@+id/is_open"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:text="Boolean" />
-
-	</LinearLayout>
-	<LinearLayout 
-	 android:layout_width="match_parent"
-     android:layout_height="match_parent"
      android:orientation="horizontal">
 
 	    <TextView
@@ -71,6 +81,62 @@
 	        android:text="100ft" />
 
 	</LinearLayout>
+	<LinearLayout 
+	 android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal">
+
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Payment Types" />
+
+	   <ListView android:id="@+id/pmt_types_list"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content" >
+		    
+		</ListView>
+
+	</LinearLayout>
 	
+	<LinearLayout 
+	 android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal">
+
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Parking rates" />
+
+	   <ListView android:id="@+id/parking_rates_list"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content" >
+		    
+		</ListView>
+
+	</LinearLayout>
 	
-</LinearLayout>
+	<LinearLayout 
+	 android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal">
+
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Charging Rate" />
+
+	   <TextView
+	        android:id="@+id/charging_rate_id"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="18.00" />
+	   <TextView
+	        android:id="@+id/currency_id"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="$" />
+	</LinearLayout>
+	</LinearLayout>
+</ScrollView>
