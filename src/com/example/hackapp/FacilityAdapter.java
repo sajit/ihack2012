@@ -2,6 +2,8 @@ package com.example.hackapp;
 
 
 
+import com.example.hackapp.model.FacilitySummary;
+
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -13,7 +15,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.hackapp.model.FacilitySummary;
+
 
 public class FacilityAdapter extends ArrayAdapter<FacilitySummary>{
 
@@ -45,7 +47,7 @@ public class FacilityAdapter extends ArrayAdapter<FacilitySummary>{
 			@Override
 			public void onClick(View v) {
 				Intent facilityDetailsIntent = new Intent(context,FacilityDetails.class);
-				facilityDetailsIntent.putExtra("facility_id", facilities[position].getFacilityId());
+				facilityDetailsIntent.putExtra("facility_id", facilities[position].getStation_id());
 				//facilityDetailsIntent.putExtra("is_open", facilities[position].isIs_open());
 				//facilityDetailsIntent.putExtra("station_name", facilities[position].getName());
 				//facilityDetailsIntent.putExtra("distance", facilities[position].getDistance());

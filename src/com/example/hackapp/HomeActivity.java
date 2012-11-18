@@ -2,6 +2,9 @@ package com.example.hackapp;
 
 import java.util.Date;
 
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -50,10 +53,15 @@ public class HomeActivity extends Activity{
 		Intent findParkingIntent = new Intent(this,FindParking.class);
 		findParkingIntent.putExtra("address", address);
 		findParkingIntent.putExtra("duration", Integer.valueOf(duration));
-		Date date = new Date(datePicker.getYear() - 1900, datePicker.getMonth(), datePicker.getDayOfMonth(),
-				timepicker.getCurrentHour(),timepicker.getCurrentMinute(),0);
-		findParkingIntent.putExtra("date", date);
-		Log.i(TAG,date.toString());
+		//DateTimeFormatter parser1 =
+			//    DateTimeFormat.forPattern("dd/MMM/yyyy:HH:mm:ss Z");
+		//String dayOfMonthString = (datePicker.getDayOfMonth()<10)?"0"
+		String dateAsString = datePicker.getYear()+"-"+datePicker.getMonth()+1+"-"+datePicker.getDayOfMonth()+"T"+
+			timepicker.getCurrentHour()+":"+timepicker.getCurrentMinute()+"Z";
+//		Date date = new Date(datePicker.getYear() - 1900, datePicker.getMonth(), datePicker.getDayOfMonth(),
+//				timepicker.getCurrentHour(),timepicker.getCurrentMinute(),0);
+		findParkingIntent.putExtra("date", dateAsString);
+		Log.i(TAG,dateAsString);
 		startActivity(findParkingIntent);
 	}
 	

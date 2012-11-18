@@ -12,12 +12,12 @@ public class Facility {
 	private float distance;
 	private List<String> hrs;
 	private boolean open;
-    private String name;
+    private String display_name;
     private double latitude;
     private double longitude;
     private String note;
     private String operator;
-    private List<String> paymentTypes;
+    private List<String> parking_rates;
     private List<String> phones;
     private String description;
     private int numberPorts;
@@ -33,7 +33,7 @@ public class Facility {
     private String port2_level; //" : "-",
     private String currency; //": "USD",
     private double charging_rates; //" : 0 (float in unit of currency),
-    private List<String> parkingRates;
+    private List<String> pmt_types;
 	
 	public String getDescription() {
 		return description;
@@ -119,12 +119,7 @@ public class Facility {
 	public void setCharging_rates(double charging_rates) {
 		this.charging_rates = charging_rates;
 	}
-	public List<String> getParkingRates() {
-		return parkingRates;
-	}
-	public void setParkingRates(List<String> parkingRates) {
-		this.parkingRates = parkingRates;
-	}
+
 	public void setDistance(float distance) {
 		this.distance = distance;
 	}
@@ -146,12 +141,7 @@ public class Facility {
 	public void setOperator(String operator) {
 		this.operator = operator;
 	}
-	public List<String> getPaymentTypes() {
-		return paymentTypes;
-	}
-	public void setPaymentTypes(List<String> paymentTypes) {
-		this.paymentTypes = paymentTypes;
-	}
+
 	
 	public double getLatitude() {
 		return latitude;
@@ -187,12 +177,7 @@ public class Facility {
 	public void setIs_open(boolean is_open) {
 		this.open = is_open;
 	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
+
 	public List<String> getPhones() {
 		return phones;
 	}
@@ -204,6 +189,24 @@ public class Facility {
 	}
 	public void setHas_charger(boolean has_charger) {
 		this.has_charger = has_charger;
+	}
+	public String getDisplay_name() {
+		return display_name;
+	}
+	public void setDisplay_name(String display_name) {
+		this.display_name = display_name;
+	}
+	public List<String> getParking_rates() {
+		return parking_rates;
+	}
+	public void setParking_rates(List<String> parking_rates) {
+		this.parking_rates = parking_rates;
+	}
+	public List<String> getPmt_types() {
+		return pmt_types;
+	}
+	public void setPmt_types(List<String> pmt_types) {
+		this.pmt_types = pmt_types;
 	}
    
 }

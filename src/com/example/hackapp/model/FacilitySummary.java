@@ -2,41 +2,43 @@ package com.example.hackapp.model;
 
 public class FacilitySummary {
 	
-	private boolean isParking;
-	private boolean isCharging;
-	private int facilityId;
-	private double rate;
-	private String name;
+	private boolean has_parking;
+	private boolean has_charging;
+	private String station_id;
+	private double total_rate;
+	private String station_name;
 	
 	public boolean isParking() {
-		return isParking;
+		return has_parking;
 	}
 	public void setParking(boolean isParking) {
-		this.isParking = isParking;
+		this.has_parking = isParking;
 	}
 	public boolean isCharging() {
-		return isCharging;
+		return has_charging;
 	}
 	public void setCharging(boolean isCharging) {
-		this.isCharging = isCharging;
+		this.has_charging = isCharging;
 	}
-	public int getFacilityId() {
-		return facilityId;
-	}
-	public void setFacilityId(int facilityId) {
-		this.facilityId = facilityId;
-	}
+	
+	
 	public double getRate() {
-		return rate;
+		return total_rate;
 	}
 	public void setRate(double rate) {
-		this.rate = rate;
+		this.total_rate = rate;
 	}
 	public String getName() {
-		return name;
+		return station_name;
 	}
 	public void setName(String name) {
-		this.name = name;
+		this.station_name = name;
+	}
+	public String getStation_id() {
+		return station_id;
+	}
+	public void setStation_id(String station_id) {
+		this.station_id = station_id;
 	}
 
 }
