@@ -2,14 +2,8 @@ package com.example.hackapp;
 
 
 
-import com.example.hackapp.model.Facility;
-import com.example.hackapp.model.FacilitySummary;
-import com.example.location.dao.LocationDao;
-
 import android.content.Context;
 import android.content.Intent;
-import android.location.Location;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -18,6 +12,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.hackapp.model.FacilitySummary;
 
 public class FacilityAdapter extends ArrayAdapter<FacilitySummary>{
 
@@ -62,30 +58,7 @@ public class FacilityAdapter extends ArrayAdapter<FacilitySummary>{
 		 TextView facilityRate = (TextView)rowView.findViewById(R.id.facility_rate);
 		 facilityRate.setText(String.valueOf(facilities[position].getRate()));
 		 
-//		 Button addressButton = (Button)rowView.findViewById(R.id.address_id);
-//		 //addressButton.setText(facilities[position].getAddress());
-//		 addressButton.setOnClickListener(new OnClickListener(){
-//
-//			@Override
-//			public void onClick(View v) {
-//				// TODO Auto-generated method stub
-//				//Uri.parse("http://maps.google.com/maps?saddr="+latitude_source+","+longitude_source+"&daddr="+latitude_dest+","+longitude_dest));
-//				LocationDao locationDao = new LocationDao(context);
-//				Location location = locationDao.getBestLocation();
-//				String latitude_source = String.valueOf(location.getLatitude());
-//				String longitude_source = String.valueOf(location.getLongitude());
-//				String latitude_dest = String.valueOf(facilities[position].getLatitude());
-//				String longitude_dest = String.valueOf(facilities[position].getLatitude());
-//				latitude_dest = "41.00000";
-//				longitude_dest = "-74.596699";
-//				String url = "http://maps.google.com/maps?saddr="+latitude_source+","+
-//				longitude_source+"&daddr="+latitude_dest+","+longitude_dest;
-//				Intent intent = new Intent(android.content.Intent.ACTION_VIEW, 
-//						Uri.parse(url));
-//						context.startActivity(intent);
-//			}
-//			 
-//		 });
+
 		 return rowView;
 	 }
 }

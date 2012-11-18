@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
@@ -55,12 +55,12 @@
 	    <TextView
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:text="Hrs" />
-		<ListView android:id="@+id/hrs_list"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content" >
-		    
-		</ListView>
+	        android:text="Hours:" />
+	    <TextView 
+	        android:id="@+id/hrs_list"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"/>
+		
 	   
 	</LinearLayout>
 	
@@ -72,7 +72,7 @@
 	    <TextView
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:text="Distance" />
+	        android:text="Distance: " />
 
 	    <TextView
 	        android:id="@+id/distance"
@@ -89,13 +89,13 @@
 	    <TextView
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:text="Payment Types" />
+	        android:text="Payment Types: " />
 
-	   <ListView android:id="@+id/pmt_types_list"
+	   <TextView android:id="@+id/pmt_types_list"
 		    android:layout_width="wrap_content"
 		    android:layout_height="wrap_content" >
 		    
-		</ListView>
+		</TextView>
 
 	</LinearLayout>
 	
@@ -107,13 +107,13 @@
 	    <TextView
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:text="Parking rates" />
+	        android:text="Parking rates: " />
 
-	   <ListView android:id="@+id/parking_rates_list"
+	   <TextView android:id="@+id/parking_rates_list"
 		    android:layout_width="wrap_content"
 		    android:layout_height="wrap_content" >
 		    
-		</ListView>
+		</TextView>
 
 	</LinearLayout>
 	
@@ -125,7 +125,7 @@
 	    <TextView
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:text="Charging Rate" />
+	        android:text="Charging Rate:" />
 
 	   <TextView
 	        android:id="@+id/charging_rate_id"
@@ -138,5 +138,11 @@
 	        android:layout_height="wrap_content"
 	        android:text="$" />
 	</LinearLayout>
+	
+	<Button 
+	    android:id="@+id/get_directions"
+	    android:layout_width="match_parent"
+	    android:text="Get Directions"
+	    android:layout_height="wrap_content"/>
 	</LinearLayout>
-</ScrollView>
+</LinearLayout>
